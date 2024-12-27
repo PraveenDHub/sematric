@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background-color: brown;
+            display: grid;
+            grid-template-areas:  'head head head'
+                                  'menu main ad1' 
+                                  'ad2 main ad1'
+                                  'footer footer footer'
+                                  ;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 4fr 1fr;
+        }
+        .header,
+        .menu,
+        .ad2,
+        .ad1,
+        .main,
+        .footer{
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        .header{
+            grid-area: head;
+        }
+        .menu{
+            grid-area: menu;
+        }
+        
+        .main{
+            grid-area: main;
+        }
+        .ad2{
+            grid-area: ad2;
+        }
+        .ad1{
+            grid-area: ad1;
+        }
+        .footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="ad2">Ad2
+        </div>
+        <div class="main">Main</div>
+        <div class="ad1">Ad1</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
